@@ -79,9 +79,17 @@ console.log('Last number of the array:', getLast([5, 4, 6, 10, 12]));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+function find(value, array) {
+  for (part of array) {
+        if (part === value) {
+          return true;
+        }
+      }
+      return false;
 }
+
+console.log('Is 1 in array?', find(1, [1, 2, 3]));
+console.log('Is Javi in the car?', find('Javi', ['Juan', 'Luis', 'Camila']));
 
 // ----------------------
 // Stretch Goals
