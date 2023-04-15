@@ -97,8 +97,15 @@ console.log('Is Javi in the car?', find('Javi', ['Juan', 'Luis', 'Camila']));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  for (character of string){
+    if (character === letter){
+      return true;
+    }
+    return false;
+  }
 }
+
+console.log('Is J the first letter of your name?', isFirstLetter('j', 'javier'));
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
