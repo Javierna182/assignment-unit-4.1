@@ -129,7 +129,39 @@ console.log('add array', sumAll([2, 3,]))
 //     return an empty array. Note: The input array should not change.
 
 
+function newArray(array,positive){
+for(positive of array){
+  if(positive > 0)
+  return array;
+}
+}
+
+console.log(newArray([2, -3, 3]))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+
+function areYouPlayingBanjo(name) {
+  if (name[0].toLowerCase()== 'r'){
+    return name + ' plays banjo';
+  }
+  else {
+    return name + ' does not play banjo';
+  }
+  }
+
+  console.log(areYouPlayingBanjo('javier'))
+  console.log(areYouPlayingBanjo('ramon'))
+
+  // function areYouPlayingBanjo(name) {
+  //   return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+  // }
