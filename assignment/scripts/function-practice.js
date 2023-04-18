@@ -80,7 +80,7 @@ console.log('Last number of the array:', getLast([5, 4, 6, 10, 12]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-  for (part of array) {
+  for (let part of array) {
         if (part === value) {
           return true;
         }
@@ -97,7 +97,7 @@ console.log('Is Javi in the car?', find('Javi', ['Juan', 'Luis', 'Camila']));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  for (character of string){
+  for (let character of string){
     if (character === letter){
       return true;
     }
@@ -129,14 +129,39 @@ console.log('add array', sumAll([2, 3,]))
 //     return an empty array. Note: The input array should not change.
 
 
-function newArray(array,positive){
-for(positive of array){
-  if(positive > 0)
-  return array;
+// function getPositives(ar){
+//   const posArr = ar.filter(num => num > -1);
+//   return posArr;
+// }
+
+function newArray(array){
+for(let positiveNum of array){
+  if(-1 < positiveNum)
+  return positiveNum;
 }
+return [ ];
 }
 
-console.log(newArray([2, -3, 3]))
+// function newArray(array){
+//   for(let i = 0; i <array.length; i++){
+//     if( -1 < [i]);
+//     return array[i];
+//   }
+//   return [ ];
+//   }
+  
+
+// function newArray(array){
+//   for(i = 0; i < array.Length; i++){
+//     if(array[i] > 0)
+//     return array[i];
+//   }
+//   return [ ];
+//   }
+
+console.log('array positive numbers:', newArray([2, 3, 3, 3]))
+console.log('array positive numbers:', newArray([-2, 3, -3, 3]))
+console.log('array negavite numbers:',newArray([-2, -3, -3]))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
@@ -162,6 +187,3 @@ function areYouPlayingBanjo(name) {
   console.log(areYouPlayingBanjo('javier'))
   console.log(areYouPlayingBanjo('ramon'))
 
-  // function areYouPlayingBanjo(name) {
-  //   return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
-  // }
