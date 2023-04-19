@@ -129,39 +129,24 @@ console.log('add array', sumAll([2, 3,]))
 //     return an empty array. Note: The input array should not change.
 
 
-// function getPositives(ar){
-//   const posArr = ar.filter(num => num > -1);
-//   return posArr;
-// }
+
 
 function newArray(array){
-for(let positiveNum of array){
-  if(-1 < positiveNum)
-  return positiveNum;
-}
-return [ ];
-}
-
-// function newArray(array){
-//   for(let i = 0; i <array.length; i++){
-//     if( -1 < [i]);
-//     return array[i];
-//   }
-//   return [ ];
-//   }
+  let nextArray = []
+  for(let positiveNum of array){
+    if(0 < positiveNum){
+      nextArray.push(positiveNum);
+    }
+  }
+  return nextArray;
+  }
   
 
-// function newArray(array){
-//   for(i = 0; i < array.Length; i++){
-//     if(array[i] > 0)
-//     return array[i];
-//   }
-//   return [ ];
-//   }
+// colsole log an array and then do array, newarray()
 
 console.log('array positive numbers:', newArray([2, 3, 3, 3]))
 console.log('array positive numbers:', newArray([-2, 3, -3, 3]))
-console.log('array negavite numbers:',newArray([-2, -3, -3]))
+console.log('array negavite numbers:', newArray([-2, -3, -3]))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
